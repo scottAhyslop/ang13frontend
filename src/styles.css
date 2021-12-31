@@ -1,1 +1,15 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+    background-color:#222;
+    color: antiquewhite;
+    font-size: 16pt;
+    margin:1rem auto;
+    text-align: center;
+}
+
+#contentWrapper{
+    width: auto;
+    height: auto;
+    background-color: purple;
+    border: 2px whitesmoke dotted;
+    border-radius: 2rem;
+}
