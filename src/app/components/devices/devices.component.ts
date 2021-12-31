@@ -7,7 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class DevicesComponent implements OnInit {
 
-  constructor() { }
+  /* let device = new Device(); */
+
+  constructor() { 
+
+      //let device = TestData.Device();
+
+  }
+
+  
 
   ngOnInit(): void {
   }

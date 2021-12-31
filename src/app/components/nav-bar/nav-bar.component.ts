@@ -9,6 +9,8 @@ export class NavBarComponent implements OnInit {
 
   constructor() { }
 
+  navBarTitle = 'ANG_FE';
+
   ngOnInit(): void {
   }
 

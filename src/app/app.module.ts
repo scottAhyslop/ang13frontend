@@ -20,6 +20,12 @@ import { SearchComponent } from './components/search/search.component';
     BrowserModule,
     AppRoutingModule
   ],
+
+  exports: [NavBarComponent,
+            DeviceComponent,
+            DevicesComponent,
+            SearchComponent],
+
   providers: [],
   bootstrap: [AppComponent]
 })
