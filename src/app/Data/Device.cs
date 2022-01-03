@@ -31,7 +31,7 @@
 
           //a general health of the machine check, assuming that there is an active routine montioring 'health' params and that this app would have access to that, in the meantime, it's a string
           DeviceStatus = deviceStatus;
-          
+
           //if timeInUse is null when Device is instantiated, sets TimeInUse to zero
           if (timeInUse==null)
           {
@@ -45,8 +45,9 @@
         public string? DeviceOSIconPath { get; set; }
         public string? DeviceType{get; set; }
         public string? DeviceOS{get; set; }
-        public string? DeviceStatus { get; set; } 
+        public string? DeviceStatus { get; set; }
          public TimeSpan TimeInUse { get; set; }
 
-      
+        
+
     }
