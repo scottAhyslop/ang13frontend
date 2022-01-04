@@ -12,6 +12,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 //module for Angular Material imports
 import { MaterialModule } from './material/material.module';
+import { MenuMaterialComponent } from './components/menu-material/menu-material.component';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { MaterialModule } from './material/material.module';
     DevicesComponent,
     DeviceComponent,
     SearchComponent,
-    GenericListComponent
+    GenericListComponent,
+    MenuMaterialComponent
   ],
   imports: [
     BrowserModule,
