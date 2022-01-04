@@ -1,6 +1,4 @@
 <!--check to see if user has passed anything in-->
-
-
 <div *ngIf="!list">
     <span #loading>
         <ng-content select="[loading]"></ng-content>
@@ -12,16 +10,17 @@
     </span>
 </div><!--end user input check-->
 
+<!--no data warning-->
+<div *ngIf="list?.length===0">
+  <span #noListItems>
+    <ng-content select="[#noListItems]"></ng-content>
+  </span>
+  <span *ngIf="!noListItems.innerHTML.trim()">
+    <p>There are no items to display</p>
+  </span>
+</div><!--end data warning-->
+
 <div class="container">
-  <!--no data warning-->
-  <div *ngIf="list?.length===0">
-      <span #noListItems>
-        <ng-content select="[#noListItems]"></ng-content>
-      </span>
-      <span *ngIf="!noListItems.innerHTML.trim()">
-        <p>There are no records to display</p>
-      </span>
-  </div>
   <!--Display area for all devices, will show a bootstrap row for each instance, with icon, device name and device status, along with an info button that will lead to device.component.html, once wired up-->
   <!--**ngIf w/ ng-container check to make sure that there are some devices, otherwise entire area isn't shown and doesn't affect the DOM-->
   <ng-container *ngIf="list && list.length > 0" id="displayBox" >

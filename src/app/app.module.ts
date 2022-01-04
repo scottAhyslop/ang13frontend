@@ -8,6 +8,11 @@ import { DevicesComponent } from './components/devices/devices.component';
 import { DeviceComponent } from './components/device/device.component';
 import { SearchComponent } from './components/search/search.component';
 import { GenericListComponent } from './components/utilities/generic-list/generic-list.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+//module for Angular Material imports
+import { MaterialModule } from './material/material.module';
+
 
 @NgModule({
   declarations: [
@@ -20,7 +25,9 @@ import { GenericListComponent } from './components/utilities/generic-list/generi
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule,
+    MaterialModule
   ],
 
   exports: [NavBarComponent,
