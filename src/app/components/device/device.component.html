@@ -1,1 +1,14 @@
-<p>device works!</p>
+<div class="container justify-content-center" style="color:#222; margin:1rem auto; text-align:left; width:80%;">
+  <!--a card to hold selected device-->
+  <div class="card" style="width: 18rem;" >
+    <div class="card-header" style="background-color:lightgray;">
+      <b>Details: </b><!--{{ device.DeviceId }}-->
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Status: </li><!--{{ device.Status }}-->
+      <li class="list-group-item">Temperature:</li><!--{{ device.Temperature }}-->
+      <li class="list-group-item">Usage:</li><!--{{ device.TimeInUse }}-->
+    </ul>
+    <p>Graph goes here</p>
+  </div>
+</div>

@@ -24,7 +24,7 @@ export class DevicesComponent implements OnInit {
         DeviceId:1,
         DeviceName: "My Lovely iPad",
         Temperature: 34.5,
-        DeviceIconPath: "",
+        DeviceIconPath: "<span class='material-icons'>phone_android</span>",
         DeviceOSIconPath: "",
         DeviceType:"Tablet",
         DeviceOS: "iOS",

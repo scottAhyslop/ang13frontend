@@ -11,10 +11,16 @@
         <!--**ngIf w/ ng-container check to make sure that there are some devices, otherwise entire area isn't shown and doesn't affect the DOM-->
       <!--wrapping div for *ngIf-->
        <div *ngIf="devices && devices.length > 0">
-          <div class="row" *ngFor="let device of devices; let index = index">
+          <div class="row" id="deviceRow" *ngFor="let device of devices; let index = index" style="margin:1rem;">
               <!--device icon-->
-              <div class="col-sm-4">
-                <!--w.i.p.-->
+              <div class="col-sm-4" id="deviceIcon">
+                <script>
+                  let iconString = "{{ device.DeviceIconPath }}";
+                  $(document).ready(function(){
+                    $("#deviceIcon").text(htmlEncode(iconString));
+                  });
+                </script>
+               <p></p>
               </div>
               <!--device name and status-->
               <div class="col-sm-4" style="float: left;">
@@ -37,5 +43,11 @@
     </div><!--end container-->
   </ng-container><!--end devices content area-->
 </app-generic-list>
+<!--js function to swap-in DeviceIconPath as an html element-->
+<script>
+  function htmlEncode(value) {
+    return $('<p/>').html(value).text();
+  }
+</script>
 
 

@@ -1,7 +1,15 @@
 <h1>Angular 13 Front-End</h1>
 <div class="container" id="contentWrapper">
- <!--  <app-nav-bar></app-nav-bar> -->
+ <!--standard b.s. 4.6.1 navbar, styled independently-->
+  <!--  <app-nav-bar></app-nav-bar> -->
+<!--Angular Materials navbar with icon and associated styling-->
  <app-menu-material></app-menu-material>
+
   <app-search></app-search>
-  <app-devices></app-devices>
+  <div class="container"></div>
+  <div class="row">
+    <div class="col-sm-6"><app-devices></app-devices></div>
+    <div class="col-sm-6"><app-device></app-device></div>
+  </div>
+
 </div>
