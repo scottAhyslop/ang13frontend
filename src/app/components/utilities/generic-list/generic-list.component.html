@@ -10,7 +10,6 @@
   <!--Display area for all devices, will show a bootstrap row for each instance, with icon, device name and device status, along with an info button that will lead to device.component.html, once wired up-->
   <!--**ngIf w/ ng-container check to make sure that there are some devices, otherwise entire area isn't shown and doesn't affect the DOM-->
   <ng-container *ngIf="list && list.length > 0" id="displayBox" >
-    <ng-content select="[header]"></ng-content>
     <ng-content select="[content]"></ng-content>
   </ng-container><!--end devices content area-->
 </div>
