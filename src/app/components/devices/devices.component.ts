@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+//import { GenericListComponent } from './components/utilities/generic-list';
 
 /**
  * Purpose: to populate a list of devices with sample data to show icon, device name and status and an information button link to a display page of the selected device
@@ -115,4 +116,8 @@ export class DevicesComponent implements OnInit {
       return deviceIcons;
     }//end getDeviceIcons
 
+    //info button function
+    getSingleDevice(deviceId: number){
+
+    }//getSingleDevice
 }

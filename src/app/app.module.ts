@@ -7,6 +7,7 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
 import { DevicesComponent } from './components/devices/devices.component';
 import { DeviceComponent } from './components/device/device.component';
 import { SearchComponent } from './components/search/search.component';
+import { GenericListComponent } from './components/utilities/generic-list/generic-list.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { SearchComponent } from './components/search/search.component';
     NavBarComponent,
     DevicesComponent,
     DeviceComponent,
-    SearchComponent
+    SearchComponent,
+    GenericListComponent
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,18 @@
+
+<div class="container">
+  <!--waiting for data gif-->
+  <img *ngIf="!list"
+    src="assets/death-skelly.gif"/>
+  <!--no data warning-->
+  <div *ngIf="list?.length===0">
+    <p>There are no records to display</p>
+  </div>
+  <!--Display area for all devices, will show a bootstrap row for each instance, with icon, device name and device status, along with an info button that will lead to device.component.html, once wired up-->
+  <!--**ngIf w/ ng-container check to make sure that there are some devices, otherwise entire area isn't shown and doesn't affect the DOM-->
+  <ng-container *ngIf="list && list.length > 0" id="displayBox" >
+    <ng-content select="[header]"></ng-content>
+    <ng-content select="[content]"></ng-content>
+  </ng-container><!--end devices content area-->
+</div>
+
+<!--<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="black" class={{device.DeviceIconPath}}><path d={{ deviceSmartPhonePath01}}>/><path d={{ deviceSmartPhonePath02}}/></svg>-->
