@@ -1,13 +1,12 @@
 <app-generic-list [list]="devices">
+  <ng-container loading>
+    Items loading...
+  </ng-container>
+  <ng-container noListItems>
+    <p>There are <b>no</b> items to display</p>
+  </ng-container>
     <ng-container id="displayBox" content>
       <div class="container">
-        <!--waiting for data gif-->
-        <img *ngIf="!devices"
-          src="assets/death-skelly.gif"/>
-        <!--no data warning-->
-        <div *ngIf="devices?.length===0">
-          <p>There are no records to display</p>
-        </div>
         <!--Display area for all devices, will show a bootstrap row for each instance, with icon, device name and device status, along with an info button that will lead to device.component.html, once wired up-->
         <!--**ngIf w/ ng-container check to make sure that there are some devices, otherwise entire area isn't shown and doesn't affect the DOM-->
       <!--wrapping div for *ngIf-->
@@ -34,7 +33,7 @@
               </div>
               <!--<button class="btn btn-lg btn-outline-success"> </button>-->
           </div><!--end devices row-->
-        </div><!--end wrapping div-->
+        </div><!--end wrapping div for *ngIf-->
     </div><!--end container-->
   </ng-container><!--end devices content area-->
 </app-generic-list>
