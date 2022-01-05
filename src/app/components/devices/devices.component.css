@@ -14,3 +14,7 @@ div[ng-container]#displayBox div.container div.row {
 div.row#deviceRow{
   background-color:lightgray;
 }
+
+div.row#deviceRow img{
+  padding-top:25%;
+}

@@ -14,13 +14,7 @@
           <div class="row" id="deviceRow" *ngFor="let device of devices; let index = index" style="margin:1rem;">
               <!--device icon-->
               <div class="col-sm-4" id="deviceIcon">
-                <script>
-                  let iconString = "{{ device.DeviceIconPath }}";
-                  $(document).ready(function(){
-                    $("#deviceIcon").text(htmlEncode(iconString));
-                  });
-                </script>
-               <p></p>
+                <img src="{{ device.DeviceIconPath }}" />
               </div>
               <!--device name and status-->
               <div class="col-sm-4" style="float: left;">
@@ -43,11 +37,19 @@
     </div><!--end container-->
   </ng-container><!--end devices content area-->
 </app-generic-list>
+
+  <!--to substitute icon entry with html, w.i.p.-->
+  <!--   <script>
+      let iconString = "{{ device.DeviceIconPath }}";
+      $(document).ready(function(){
+        $("#deviceIcon").text(htmlEncode(iconString));
+      });
+    </script> -->
 <!--js function to swap-in DeviceIconPath as an html element-->
-<script>
-  function htmlEncode(value) {
-    return $('<p/>').html(value).text();
+<!-- <script>
+  function htmlEncode(iconString) {
+    return $('<p>').text(iconString).html();
   }
-</script>
+</script> -->
 
 
