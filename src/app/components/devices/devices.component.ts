@@ -61,7 +61,7 @@ export class DevicesComponent implements OnInit {
 
   ngOnInit(): void {
 
-   
+
 
   }//end ngOnInit()
 
@@ -87,6 +87,7 @@ export class DevicesComponent implements OnInit {
     //info button function
     getSingleDevice(deviceId: number){
       this.onGetDevice.emit(deviceId);
+      alert(`Device with an Id of: ${deviceId} was emitted to device.component`);
     }//getSingleDevice
 }
 
