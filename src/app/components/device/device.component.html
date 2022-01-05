@@ -2,7 +2,8 @@
   <app-menu-material></app-menu-material>
   <app-search></app-search>
   <div class="row">
-    <div class="col-sm-6"><app-devices></app-devices></div>
+    <!--(getSingleDevice)="handleSingleDevice($event)" to catch id from devices.component.html-->
+    <div class="col-sm-6"><app-devices (onGetDevice)="showDevice($event)"></app-devices></div>
     <div class="col-sm-6"><div class="container justify-content-center" id="deviceCard"   style="color:#222; margin:1rem auto; text-align:left; width:80%;">
       <!--a card to hold selected device-->
       <div class="card" style="width: 18rem;" >

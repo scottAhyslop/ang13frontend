@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-//import { GenericListComponent } from './components/utilities/generic-list';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 /**
  * Purpose: to populate a list of devices with sample data to show icon, device name and status and an information button link to a display page of the selected device
@@ -17,47 +16,48 @@ export class DevicesComponent implements OnInit {
 
 
 
-      devices:any = [];
-      constructor() {
-      //devices sample data
-        this.devices = [
-          {
-            DeviceId:1,
-            DeviceName: "My Lovely iPad",
-            Temperature: 34.5,
-            DeviceIconPath: "assets/tablet.png",
-            DeviceOSIconPath: "",
-            DeviceType:"Tablet",
-            DeviceOS: "iOS",
-            DeviceStatus: "OPERATIONAL",
-            TimeInUse: "1,3,14,56"
-          },
-          {
-            DeviceId:2,
-            DeviceName: "Dad's Phone",
-            Temperature: 68.5,
-            DeviceIconPath: "assets/phone.png",
-            DeviceOSIconPath: "",
-            DeviceType: "Phone",
-            DeviceOS: "Android",
-            DeviceStatus: "OVERHEATING",
-            TimeInUse: "16,24,46,2"
-          },
-          {
-            DeviceId: 3,
-            DeviceName: "Mom's laptop",
-            Temperature: 14.5,
-            DeviceIconPath: "assets/monitor.png",
-            DeviceOSIconPath: "",
-            DeviceType: "Desktop",
-            DeviceOS: "Windows",
-            DeviceStatus: "COOLING",
-            TimeInUse: "29,41,37,42"
-          }
-        ];
+  devices:any = [];
+  constructor() {
+  //devices sample data
+    this.devices = [
+      {
+        DeviceId:1,
+        DeviceName: "My Lovely iPad",
+        Temperature: 34.5,
+        DeviceIconPath: "assets/tablet.png",
+        DeviceOSIconPath: "",
+        DeviceType:"Tablet",
+        DeviceOS: "iOS",
+        DeviceStatus: "OPERATIONAL",
+        TimeInUse: "1,3,14,56"
+      },
+      {
+        DeviceId:2,
+        DeviceName: "Dad's Phone",
+        Temperature: 68.5,
+        DeviceIconPath: "assets/phone.png",
+        DeviceOSIconPath: "",
+        DeviceType: "Phone",
+        DeviceOS: "Android",
+        DeviceStatus: "OVERHEATING",
+        TimeInUse: "16,24,46,2"
+      },
+      {
+        DeviceId: 3,
+        DeviceName: "Mom's laptop",
+        Temperature: 14.5,
+        DeviceIconPath: "assets/monitor.png",
+        DeviceOSIconPath: "",
+        DeviceType: "Desktop",
+        DeviceOS: "Windows",
+        DeviceStatus: "COOLING",
+        TimeInUse: "29,41,37,42"
+      }
+    ];
   }//end constructor
 
-  @Input()
+ @Output()
+ onGetDevice: EventEmitter<number> = new EventEmitter<number>();
 
   ngOnInit(): void {
 
@@ -108,7 +108,7 @@ export class DevicesComponent implements OnInit {
 
     //info button function
     getSingleDevice(deviceId: number){
-
+      this.onGetDevice.emit(deviceId);
     }//getSingleDevice
 }
 
