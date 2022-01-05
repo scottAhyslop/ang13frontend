@@ -13,6 +13,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 //module for Angular Material imports
 import { MaterialModule } from './material/material.module';
 import { MenuMaterialComponent } from './components/menu-material/menu-material.component';
+import { TestComponentComponent } from './components/test-component/test-component.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { MenuMaterialComponent } from './components/menu-material/menu-material.
     DeviceComponent,
     SearchComponent,
     GenericListComponent,
-    MenuMaterialComponent
+    MenuMaterialComponent,
+    TestComponentComponent
   ],
   imports: [
     BrowserModule,

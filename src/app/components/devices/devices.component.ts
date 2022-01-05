@@ -68,10 +68,12 @@ export class DevicesComponent implements OnInit {
   //info button function
   getSingleDevice(deviceId: number){
 
-    var device = this.devices.Find((d: { DeviceId: number; }) => d.DeviceId == deviceId);
+    const device = this.devices.find((d: { DeviceId: number; }) => d.DeviceId === deviceId);
+    //not working yet
+    /* var device = this.devices.Array().prototype.some((d: { DeviceId: number; }) => d.DeviceId === deviceId); */
     this.onGetDevice.emit(device);
     //TESTING ONLY: Remove for production
-    alert(`Device with an Id of: ${deviceId} was emitted to device.component`);
+    alert(`Device with an Id of: ${device.DeviceId} was emitted to device.component`);
   }//getSingleDevice
 }
 
