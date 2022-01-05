@@ -16,7 +16,13 @@ div.row#deviceRow{
 }
 
 div.row#deviceRow img{
-  padding-top:25%;
+  padding:1rem;
 }
 
+div#deviceInfo p {
 
+  margin-bottom:-0.25rem;
+}
+div#deviceInfo{
+  margin-top:1rem;
+}

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 //import { GenericListComponent } from './components/utilities/generic-list';
 
 /**
@@ -15,47 +15,50 @@ import { Component, OnInit } from '@angular/core';
 
 export class DevicesComponent implements OnInit {
 
- devices:any = [];
- constructor() {
 
-     //devices sample data
-     this.devices = [
-      {
-        DeviceId:1,
-        DeviceName: "My Lovely iPad",
-        Temperature: 34.5,
-        DeviceIconPath: "assets/tablet.png",
-        DeviceOSIconPath: "",
-        DeviceType:"Tablet",
-        DeviceOS: "iOS",
-        DeviceStatus: "OPERATIONAL",
-        TimeInUse: "1,3,14,56"
-      },
-      {
-        DeviceId:2,
-        DeviceName: "Dad's Phone",
-        Temperature: 68.5,
-        DeviceIconPath: "assets/phone.png",
-        DeviceOSIconPath: "",
-        DeviceType: "Phone",
-        DeviceOS: "Android",
-        DeviceStatus: "OVERHEATING",
-        TimeInUse: "16,24,46,2"
-      },
-      {
-        DeviceId: 3,
-        DeviceName: "Mom's laptop",
-        Temperature: 14.5,
-        DeviceIconPath: "assets/monitor.png",
-        DeviceOSIconPath: "",
-        DeviceType: "Desktop",
-        DeviceOS: "Windows",
-        DeviceStatus: "COOLING",
-        TimeInUse: "29,41,37,42"
-      }
-    ];
 
-  }
+      devices:any = [];
+      constructor() {
+      //devices sample data
+        this.devices = [
+          {
+            DeviceId:1,
+            DeviceName: "My Lovely iPad",
+            Temperature: 34.5,
+            DeviceIconPath: "assets/tablet.png",
+            DeviceOSIconPath: "",
+            DeviceType:"Tablet",
+            DeviceOS: "iOS",
+            DeviceStatus: "OPERATIONAL",
+            TimeInUse: "1,3,14,56"
+          },
+          {
+            DeviceId:2,
+            DeviceName: "Dad's Phone",
+            Temperature: 68.5,
+            DeviceIconPath: "assets/phone.png",
+            DeviceOSIconPath: "",
+            DeviceType: "Phone",
+            DeviceOS: "Android",
+            DeviceStatus: "OVERHEATING",
+            TimeInUse: "16,24,46,2"
+          },
+          {
+            DeviceId: 3,
+            DeviceName: "Mom's laptop",
+            Temperature: 14.5,
+            DeviceIconPath: "assets/monitor.png",
+            DeviceOSIconPath: "",
+            DeviceType: "Desktop",
+            DeviceOS: "Windows",
+            DeviceStatus: "COOLING",
+            TimeInUse: "29,41,37,42"
+          }
+        ];
+  }//end constructor
+
+  @Input()
+
   ngOnInit(): void {
 
     this.getDeviceOSAndTypeIcons();
@@ -72,19 +75,6 @@ export class DevicesComponent implements OnInit {
 
       //load up Device Icons with types
       var deviceIcons = this.getDeviceIcons();
-
-
-      //sort through the two lists and pick out a device icon that matches the deviceType
-
-     /*  for (let i = 0; i < devices.length ; i++) {
-   devices[i].DeviceIconPath = deviceIcons.filter(device => device.find(     //'DeviceType' === devices[i].DeviceIconPath)).toString(); */
-/*
-      for (var [index, device] of devices.entries()) {
-
-        device.DeviceIconPath = deviceIcons.filter(x => x.DeviceType == device.DeviceType).toString();
-
-      }
- */
 
     }//end getDeviceOSAndTypeIcons
 
@@ -121,3 +111,17 @@ export class DevicesComponent implements OnInit {
 
     }//getSingleDevice
 }
+
+/* code graveyard ;) */
+//DELETE FOR PRODUCTION
+//sort through the two lists and pick out a device icon that matches the deviceType
+
+/*  for (let i = 0; i < devices.length ; i++) {
+   devices[i].DeviceIconPath = deviceIcons.filter(device => device.find(     //'DeviceType' === devices[i].DeviceIconPath)).toString(); */
+/*
+      for (var [index, device] of devices.entries()) {
+
+        device.DeviceIconPath = deviceIcons.filter(x => x.DeviceType == device.DeviceType).toString();
+
+      }
+ */
