@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 /**
  * Purpose: to populate a list of devices with sample data to show icon, device name and status and an information button link to a display page of the selected device
@@ -15,7 +16,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 export class DevicesComponent implements OnInit {
 
 
-
+  device:any;
   devices:any = [];
   constructor() {
   //devices sample data
@@ -71,7 +72,8 @@ export class DevicesComponent implements OnInit {
     const device = this.devices.find((d: { DeviceId: number; }) => d.DeviceId === deviceId);
     //not working yet
     /* var device = this.devices.Array().prototype.some((d: { DeviceId: number; }) => d.DeviceId === deviceId); */
-    this.onGetDevice.emit(device);
+    this.device = device;
+    this.onGetDevice.emit(this.device);
     //TESTING ONLY: Remove for production
     alert(`Device with an Id of: ${device.DeviceId} was emitted to device.component`);
   }//getSingleDevice

@@ -1,4 +1,5 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ViewChild } from '@angular/core';
+import { DevicesComponent } from '../devices/devices.component';
 
 @Component({
   selector: 'app-device',
@@ -8,6 +9,9 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 
 
 export class DeviceComponent implements OnInit {
+
+  @ViewChild(DevicesComponent)
+  device!: DevicesComponent;
 
   constructor() { }
 
