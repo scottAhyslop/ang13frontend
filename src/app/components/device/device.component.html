@@ -9,8 +9,10 @@
   <div class="container">
     <div class="row">
       <!--(getSingleDevice)="handleSingleDevice($event)" to catch id from devices.component.html-->
-      <div class="col-sm-6">
-          <h2 id="relatedDevices" ><span><b>Related Devices</b></span></h2>  <app-devices (onGetDevice)="showDevice($event)"></app-devices>
+      <div class="col-sm-6" >
+        <div id="relatedDevices">
+          <h2><span ><b>Related Devices</b></span></h2>  <app-devices (onGetDevice)="showDevice($event)"></app-devices>
+        </div>
       </div><!--end devices list-->
         <!--a card to hold selected device-->
       <div class="col-sm-6" content>
