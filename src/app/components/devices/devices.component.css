@@ -6,6 +6,7 @@
     background-color: rgba(255,255,255,0.7);
     color: brown;
     background-color:antiquewhite;
+    width:100%;
 }
 
 div[ng-container]#displayBox div.container div.row {

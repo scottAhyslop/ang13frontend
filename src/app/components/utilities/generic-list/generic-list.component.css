@@ -1,0 +1,10 @@
+#noData{
+  background-color:orange;
+  width:50%;
+  margin:1rem auto;
+  text-align:center;
+  text-shadow:0.5px 0.5px antiquewhite;
+  border:1px solid black;
+  border-radius:1rem;
+  box-shadow: 5px 5px 5px #222;
+}

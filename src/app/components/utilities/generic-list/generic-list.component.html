@@ -7,6 +7,7 @@
       <!--waiting for data gif-->
       <img *ngIf="!list"
       src="assets/death-skelly.gif"/>
+      <p id="noData">No data...sorry</p>
     </span>
 </div><!--end user input check-->
 
@@ -23,7 +24,9 @@
 <div class="container">
   <!--Display area for all devices, will show a bootstrap row for each instance, with icon, device name and device status, along with an info button that will lead to device.component.html, once wired up-->
   <!--**ngIf w/ ng-container check to make sure that there are some devices, otherwise entire area isn't shown and doesn't affect the DOM-->
-  <ng-container *ngIf="list && list.length > 0" id="displayBox" >
+  <!--TESTING ONLY: for device.component.html, put back after testing-->
+  <!--*ngIf="list && list.length > 0"-->
+  <ng-container  id="displayBox" >
     <ng-content select="[content]"></ng-content>
   </ng-container><!--end devices content area-->
 </div><!--end wrapping container-->

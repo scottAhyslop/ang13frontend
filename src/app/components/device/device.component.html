@@ -1,31 +1,34 @@
 <app-generic-list [list]=""><!--device-->
-  <ng-container loading>
+  <!-- <ng-container loading>
     Items loading...
   </ng-container>
   <ng-container noListItems>
     <p>There are <b>no</b> items to display</p>
-  </ng-container>
+  </ng-container> -->
 <ng-container id="displayBox" content>
   <div class="container">
-    <app-menu-material></app-menu-material>
-    <app-search></app-search>
     <div class="row">
       <!--(getSingleDevice)="handleSingleDevice($event)" to catch id from devices.component.html-->
-      <div class="col-sm-6"><app-devices (onGetDevice)="showDevice($event)"></app-devices></div>
-      <div class="col-sm-6"><div class="container justify-content-center" id="deviceCard"   style="color:#222; margin:1rem auto; text-align:left; width:80%;">
+      <div class="col-sm-6">
+          <h2 id="relatedDevices" ><span><b>Related Devices</b></span></h2>  <app-devices (onGetDevice)="showDevice($event)"></app-devices>
+      </div><!--end devices list-->
         <!--a card to hold selected device-->
-        <div class="card" style="width: 18rem;" >
-          <div class="card-header" style="background-color:lightgray;">
-            <b>Details: <!-- {{ list.DeviceId }} --></b>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">Status: <!-- {{ list.Status }} --></li>
-            <li class="list-group-item">Temperature:</li><!--{{ device.Temperature }}-->
-            <li class="list-group-item">Usage:</li><!--{{ device.TimeInUse }}-->
-          </ul>
-          <p>Graph goes here</p>
-        </div>
-      </div></div>
+      <div class="col-sm-6" content>
+        <div class="container" id="deviceCard" >
+        <!---->
+          <div class="card" >
+            <div class="card-header" style="background-color:lightgray;">
+              <b>Details: <!-- {{ list.DeviceId }} --></b>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Status: <!-- {{ list.Status }} --></li>
+              <li class="list-group-item">Temperature:</li><!--{{ device.Temperature }}-->
+              <li class="list-group-item" >Usage:</li><!--{{ device.TimeInUse }}-->
+            </ul>
+            <img src="assets/barGraph.png" />
+          </div><!--end card-->
+      </div><!--end card wrapping container-->
+    </div><!--end col02 device card-->
     </div><!--end row01-->
   </div><!--end wrapping container-->
 </ng-container>

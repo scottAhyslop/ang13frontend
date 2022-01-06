@@ -4,5 +4,45 @@ body
 }
 
 #deviceCard {
-   display:none;
+  padding-top:5%;
+  float:left;
+  color:#222;
+  margin:0 auto;
+  text-align:left; width:100%;
+   /* display:none; */
+}
+#relatedDevices {
+  background-color:lightgrey;
+  width:77.55%;
+  text-align:center;
+  margin:0 auto;
+
+}
+
+@media screen and (min-width: 360px) and (max-width:400px) {
+  div.container#deviceCard div.card {/*
+    /*  margin-left:10%; */
+    /* padding-left:5%; */
+
+    /* width:80%; */
+    width: 80%;
+    margin:0 0 10% 15%;
+  }
+  .row{
+    width:100%;
+  }
+  #relatedDevices{
+
+    text-align:center;
+    margin:1rem auto;
+  }
+}
+
+@media screen and (min-width: 410px) and (max-width:800px) {
+
+
+
+  .row{
+    width:100%;
+  }
 }
