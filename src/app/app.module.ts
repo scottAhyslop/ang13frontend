@@ -15,6 +15,7 @@ import { MaterialModule } from './material/material.module';
 import { MenuMaterialComponent } from './components/menu-material/menu-material.component';
 import { TestComponentComponent } from './components/test-component/test-component.component';
 import { HomeComponent } from './components/home/home.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { HomeComponent } from './components/home/home.component';
     GenericListComponent,
     MenuMaterialComponent,
     TestComponentComponent,
-    HomeComponent
+    HomeComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 import { AnyCatcher } from 'rxjs/internal/AnyCatcher';
 
 /**
@@ -18,7 +19,8 @@ export class DevicesComponent implements OnInit {
 
   device:any;
   devices:any = [];
-  constructor() {
+  constructor(private router:Router, private activatedRoute:ActivatedRoute) {
+
   //devices sample data
     this.devices = [
       {
@@ -61,19 +63,18 @@ export class DevicesComponent implements OnInit {
  onGetDevice: EventEmitter<number> = new EventEmitter<number>();
 
   ngOnInit(): void {
+      this.activatedRoute.params.subscribe(params => {
 
-
-
-  }//end ngOnInit()
+      });
+    }//end ngOnInit()
 
   //info button function
   getSingleDevice(deviceId: number){
 
     const device = this.devices.find((d: { DeviceId: number; }) => d.DeviceId === deviceId);
-    //not working yet
-    /* var device = this.devices.Array().prototype.some((d: { DeviceId: number; }) => d.DeviceId === deviceId); */
     this.device = device;
     this.onGetDevice.emit(this.device);
+    this.router.navigate(['/devices']);
     //TESTING ONLY: Remove for production
     alert(`Device with an Id of: ${device.DeviceId} was emitted to device.component`);
   }//getSingleDevice
