@@ -8,9 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'Angular 13 Front-End';
 
-  handleSingleDevice(deviceId: number){
-    alert(`User has selected Device ${deviceId}`);
-  }
+  
 }
 
 

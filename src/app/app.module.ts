@@ -14,6 +14,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './material/material.module';
 import { MenuMaterialComponent } from './components/menu-material/menu-material.component';
 import { TestComponentComponent } from './components/test-component/test-component.component';
+import { HomeComponent } from './components/home/home.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { TestComponentComponent } from './components/test-component/test-compone
     SearchComponent,
     GenericListComponent,
     MenuMaterialComponent,
-    TestComponentComponent
+    TestComponentComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

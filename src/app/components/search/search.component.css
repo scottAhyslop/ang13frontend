@@ -1,8 +1,21 @@
-#searchBox {
+/* #searchBox {
     height: 5rem;
     background-color: lightgray;
     margin:1rem auto;
     width: 100%;
-    /* padding-top: 1rem; */
+    /* padding-top: 1rem;} */
 
-}
+    .container{
+      background-color:lightgrey;
+      height:5rem;
+      padding:1rem;
+      width:87%;
+      margin-top:1rem;
+      margin-bottom:1rem;
+    }
+    a{
+      text-decoration:none;
+    }
+    a:hover {
+      color:red;
+    }

@@ -1,16 +1,15 @@
 <h1>Angular 13 Front-End</h1>
 <div class="container" id="contentWrapper">
- <!--standard b.s. 4.6.1 navbar, styled independently-->
+  <!--standard b.s. 4.6.1 navbar, styled independently-->
+  <!--navbar common to all pages-->
    <app-nav-bar></app-nav-bar>
+   <!--search bar common to all pages-->
+   <app-search></app-search>
+   <!--where content will stream-->
+   <router-outlet></router-outlet>
+</div>
+<!--Code graveyard ;)-->
+<!--TESTING ONLY: Remove for production-->
+<!--(getSingleDevice)="handleSingleDevice($event)"-->
 <!--Angular Materials navbar with icon and associated styling-->
 <!--  <app-menu-material></app-menu-material> -->
-
-  <app-search></app-search>
-  <div class="container">
-    <div class="row">
-      <div class="col-sm-12"><app-devices ></app-devices></div>
-    </div>
-  </div><!--end container-->
-</div>
-<!--(getSingleDevice)="handleSingleDevice($event)"-->
-
