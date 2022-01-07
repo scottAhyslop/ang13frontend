@@ -16,6 +16,9 @@ import { MenuMaterialComponent } from './components/menu-material/menu-material.
 import { TestComponentComponent } from './components/test-component/test-component.component';
 import { HomeComponent } from './components/home/home.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { AddDeviceComponent } from './components/device/add-device/add-device.component';
+import { DeleteDeviceComponent } from './components/device/delete-device/delete-device.component';
+import { UpdateDeviceComponent } from './components/device/update-device/update-device.component';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     MenuMaterialComponent,
     TestComponentComponent,
     HomeComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AddDeviceComponent,
+    DeleteDeviceComponent,
+    UpdateDeviceComponent
   ],
   imports: [
     BrowserModule,
